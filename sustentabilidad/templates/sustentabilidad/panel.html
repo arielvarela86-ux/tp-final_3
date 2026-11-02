@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoTech - Panel de Sustentabilidad</title>
+</head>
+<body>
+    <h1>Panel de Control de Emisiones Industriales</h1>
+    <p><strong>Total Global de Emisiones:</strong> {{ total_emisiones }} kg CO₂</p>
+    <p><strong>Planta con Mayor Consumo:</strong> {{ planta_mayor_consumo }} ({{ emisiones_maximas }} kg CO₂)</p>
+    
+    <h2>Detalle por Planta:</h2>
+    <ul>
+        {% for planta, emisiones in detalle_plantas.items %}
+            <li>{{ planta }}: {{ emisiones }} kg CO₂</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
